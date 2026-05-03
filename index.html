@@ -190,7 +190,7 @@
           gap: 36px;
         }
         .projects-grid {
-          grid-template-columns: 1fr;
+          grid-template-columns: repeat(2, 1fr);
         }
         .exp-3col {
           grid-template-columns: 1fr;
@@ -223,120 +223,272 @@
         .nav-links {
           display: none;
         }
-        .hero-h1 {
-          font-size: clamp(2.6rem, 5vw, 4.2rem);
-          font-weight: 700;
-          letter-spacing: -0.03em;
+        .hamburger {
+          display: block;
         }
-        .section-title {
-          font-size: 1.8rem;
-        }
+
         section {
           padding: 80px 20px 48px;
         }
+
+        #home {
+          flex-direction: column;
+          padding-top: 100px;
+          gap: 0;
+          min-height: auto;
+          padding-bottom: 60px;
+        }
+
+        .hero-tag {
+          font-size: 0.75rem;
+        }
+
+        .hero-h1 {
+          font-size: 2.2rem;
+        }
+
+        .hero-desc {
+          font-size: 0.78rem;
+          max-width: 100%;
+        }
+
+        .hero-right {
+          align-self: center;
+          margin-top: 40px;
+          margin-bottom: 20px;
+        }
+
         .avatar-ring {
-          width: 380px;
-          height: 380px;
+          width: 260px;
+          height: 260px;
         }
+
         .avatar-img {
-          width: 300px;
-          height: 300px;
+          width: 210px;
+          height: 210px;
         }
+
         .contact-chips {
           flex-direction: column;
           align-items: flex-start;
+          gap: 8px;
         }
-        .stats {
+
+        .chip {
+          font-size: 0.65rem;
+        }
+
+        .hero-actions {
+          flex-direction: column;
+          align-items: flex-start;
           gap: 16px;
         }
+
+        .social-icons {
+          margin-top: 4px;
+        }
+
+        .stats {
+          flex-wrap: wrap;
+          gap: 16px;
+          margin-top: 40px;
+          padding-top: 28px;
+        }
+
+        .stat {
+          min-width: 42%;
+          border-right: none;
+          margin-right: 0;
+        }
+
         .stat-num {
           font-size: 2rem;
         }
-        .exp-grid {
-          grid-template-columns: 1fr;
+
+        .section-title {
+          font-size: 1.8rem;
         }
+
+        .about-grid {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+
+        .info-row {
+          flex-direction: column;
+          gap: 2px;
+        }
+        .info-key {
+          width: auto;
+        }
+
+        .skills-wrapper {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+
+        .projects-grid {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+
         .services-grid {
           grid-template-columns: 1fr;
         }
+
         .work-grid {
           grid-template-columns: 1fr;
         }
+
+        .exp-3col {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+
+        .ref-grid {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+
+        #education > div {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .masonry-grid {
+          columns: 2;
+          column-gap: 10px;
+        }
+
         .contact-cards {
           flex-direction: column;
-          align-items: center;
+          align-items: stretch;
         }
+
         .contact-card {
           width: 100%;
-          max-width: 320px;
         }
+
+        .exp-grid {
+          grid-template-columns: 1fr;
+        }
+
         footer {
           padding: 20px;
+          flex-direction: column;
+          gap: 8px;
+          text-align: center;
+        }
+
+        #projects {
+          padding: 60px 20px;
+        }
+        #skills {
+          padding: 60px 20px;
+        }
+        #about {
+          padding: 60px 20px;
+        }
+        #contact {
+          padding: 60px 20px;
+        }
+        #gallery {
+          padding: 60px 20px;
+        }
+        #education {
+          padding: 60px 20px;
+        }
+        #experience {
+          padding: 60px 20px;
+        }
+        #references {
+          padding: 60px 20px;
         }
       }
 
       @media (max-width: 480px) {
-        .hero-h1 {
-          font-size: 1.9rem;
+        nav {
+          padding: 14px 16px;
         }
-        .hero-desc {
-          font-size: 0.78rem;
-        }
-        .hire-btn {
-          display: none;
-        }
+
         .logo {
           font-size: 1.1rem;
         }
-        .section-title {
-          font-size: 1.5rem;
+
+        .hire-btn {
+          display: none;
         }
+
+        .hero-h1 {
+          font-size: 1.8rem;
+        }
+
+        .hero-desc {
+          font-size: 0.74rem;
+        }
+
         .avatar-ring {
-          width: 200px;
-          height: 200px;
+          width: 220px;
+          height: 220px;
         }
+
         .avatar-img {
-          width: 155px;
-          height: 155px;
+          width: 175px;
+          height: 175px;
         }
+
         .stat {
           min-width: 45%;
         }
-      }
 
-      .hamburger {
-        display: none;
-        background: none;
-        border: 1px solid var(--green);
-        color: var(--green);
-        font-size: 1.2rem;
-        padding: 6px 12px;
-        border-radius: 6px;
-        cursor: pointer;
-      }
+        .stat-num {
+          font-size: 1.8rem;
+        }
 
-      @media (max-width: 768px) {
-        .hamburger {
-          display: block;
+        .section-title {
+          font-size: 1.5rem;
         }
-        .nav-links {
-          display: none;
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: rgba(13, 15, 16, 0.97);
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          gap: 32px;
-          z-index: 999;
+
+        .project-card {
+          padding: 22px 18px;
         }
-        .nav-links.open {
-          display: flex;
+
+        .project-name {
+          font-size: 1.1rem;
         }
-        .nav-links a {
-          font-size: 1.2rem;
+
+        .masonry-grid {
+          columns: 1;
+        }
+
+        .btn-outline {
+          font-size: 0.7rem;
+          padding: 11px 20px;
+        }
+
+        .chip {
+          font-size: 0.62rem;
+          padding: 5px 10px;
+        }
+
+        .tag {
+          font-size: 0.62rem;
+        }
+
+        .project-skill {
+          font-size: 0.6rem;
+        }
+
+        .ref-card {
+          padding: 20px 16px;
+        }
+
+        .exp-item {
+          padding: 16px 14px;
+        }
+
+        .contact-card {
+          padding: 16px 20px;
         }
       }
 
